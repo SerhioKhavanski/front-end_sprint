@@ -1,14 +1,17 @@
+
 @import url(Module_1_task_1_variables.css);
+a:focus-visible, input:focus-visible, button:focus-visible{
+    outline: 2px solid orange;
+}
 body{
     background-color: var(--bg-color);
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 *{
     box-sizing: border-box;
 }
-body{
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 h1,h2,h3{
     color: var(--main-txt);
 }
@@ -27,7 +30,7 @@ aside{
     translate: -100% 10%;
     transition: 0.5s;
     position: fixed;
-    
+    z-index: 5;
 }
 
 .side-menu{
@@ -54,11 +57,9 @@ aside{
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     color: var(--a-color);
+    transition: 0.2s;
 }
-.secBtn:active{
-    box-shadow: inset 0 0 5px var(--shadow-color);
-    
-}
+
 .label-for-all-project{
     font-weight: 600;
     width: fit-content;
@@ -66,14 +67,12 @@ aside{
     top: 2rem;
     left: 2rem;
     cursor: pointer;
+    z-index: 6;
+}
+nav a{
+
 }
 
-.label-for-all-project:active{
-    box-shadow: inset 0 0 5px var(--shadow-color);
-    color: rgb(212, 212, 212);
-    translate: 0 5%;
-    background-color: rgb(74, 89, 158);
-}
 /* --------------menu for all projects------------------------ */
 a{
     text-decoration: none;
@@ -92,6 +91,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 0 15px var(--shadow-color);
+    border-radius: 100px;
+    padding-inline: 2rem;
 }
 nav ul{
     list-style: none;
@@ -99,6 +101,11 @@ nav ul{
     gap: 16px;
     padding: 0;
     margin: 0;
+}
+nav a{
+    padding:  0.1rem .5rem;
+    border-radius: 4px;
+    transition: 0.3s;
 }
 .card-grid{
     display: grid;
@@ -110,19 +117,59 @@ nav ul{
     border: 1px solid var(--border-color);
     border-radius: 15px;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .card>img{
     width: 100%;
 }
-#pricing>h2{
+.heading{
     text-align: center;
 }
+.features-grid{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:16px;
+}
+.card-mod{
+    position: relative;
+    padding-top: 6rem;
+    margin-top: 7rem;
+}
+.card-mod>img{
+    position: absolute;
+    width: 75%;
+    bottom: 75%;
+    left:10%;
+}
 @media(max-width:768px){
+    .card-mod{
+        margin-top: 10rem;
+        padding-top: 7rem;
+    }
+    .card-mod>img{
+        bottom: 65%;
+    }
+    .features-grid{
+        grid-template-columns: 1fr 1fr;
+    }
     .card-grid{
         grid-template-columns: 1fr;
     }
 }
+@media(max-width:425px){
+    .features-grid{
+        grid-template-columns: 1fr;
+    }
+}
 @media (hover:hover) and (pointer: fine){
+    .secBtn:hover{
+        box-shadow: 0 0 15px var(--shadow-color);
+        translate: 0 -4px;
+    }
     .label-for-all-project{
         transition:box-shadow 0.3s;
     }
@@ -130,5 +177,22 @@ nav ul{
         border-color: transparent;
         box-shadow: 0 0 15px rgba(151, 183, 241, 0.568);
     }
+    nav a:hover{
+        box-shadow: 0 0 15px var(--shadow-color);
+    }
+}
+.secBtn:active{
+    box-shadow: inset 0 0 5px var(--inner-shadow-color);
+    background-color: var(--bg-color-active);
+    color: var(--btn-active-color);
+    translate: 0 0px;
+    
+}
+.label-for-all-project:active{
+    box-shadow: inset 0 0 5px var(--shadow-color);
+    color: rgb(212, 212, 212);
+    translate: 0 5%;
+    background-color: rgb(74, 89, 158);
+
 }
 

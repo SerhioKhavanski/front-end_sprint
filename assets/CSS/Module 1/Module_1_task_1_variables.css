@@ -5,13 +5,20 @@
     --bg-color:white;
     --main-txt:rgb(70, 70, 70);
     --btn-color:rgb(105, 128, 228);
+    --bg-color-active:rgb(245, 245, 245);
+    --btn-active-color:rgb(181, 181, 181);
+    --inner-shadow-color:rgba(0, 0, 0, 0.487);
+
 }
 @media (prefers-color-scheme: dark) {
     :root{
         --border-color:rgb(122, 122, 122);
-        --shadow-color:rgba(245, 245, 245, 0.644);
+        --shadow-color:rgba(245, 245, 245, 0.213);
         --a-color:rgb(180, 180, 180);
-        --bg-color:rgb(39, 39, 39);
+        --bg-color:rgb(27, 27, 27);
         --main-txt:rgb(247, 247, 247);
+        --bg-color-active:rgb(17, 17, 17);
+        --btn-active-color:rgb(118, 118, 118);
+        --inner-shadow-color:rgb(134, 134, 134);
     }
 }

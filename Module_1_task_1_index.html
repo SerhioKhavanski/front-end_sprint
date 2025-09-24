@@ -10,9 +10,9 @@
 <body>
     <section class="aside-menu">
         <input type="checkbox" name="" id="asideCheckbox">
-        <label class="label-for-all-project" for="asideCheckbox">Все проекты</label>
+        <label tabindex="18" aria-labelledby="Кнопка для отображения всех проектов" class="label-for-all-project" for="asideCheckbox">Все проекты</label>
         <aside>
-            <h2>Модуль 1</h2>
+            <h2 aria-labelledby = "первый модуль">Модуль 1 Html/CSS</h2>
             <hr>
             <ul class="side-menu">
                 <li><a href="Module_1_task_1_index.html">Проект - 1</a></li>
@@ -21,7 +21,7 @@
                 <li><a href="">Проект - 4</a></li>
                 <li><a href="">Проект - 5</a></li>
             </ul>
-            <h2>Модуль 2</h2>
+            <h2 aria-labelledby = "второй модуль">Модуль 2</h2>
             <hr>
             <ul class="side-menu">
                 <li><a href="">Проект - 1</a></li>
@@ -35,55 +35,101 @@
     </section>
     <!--------------menu for all projects------------------------>
     <header>
-        <a href="#" class="logo">Brand</a>
-        <nav aria-label="Основная навигация">
+        <a tabindex="1" href="#" class="logo">Brand</a>
+        <nav aria-labelledby="Основная навигация">
             <ul>
-                <li><a href="">Фичи</a></li>
-                <li><a href="">Цены</a></li>
-                <li><a href="">Контакты</a></li>
+                <li><a tabindex="1" href="#features">Фичи</a></li>
+                <li><a tabindex="2" href="#pricing">Цены</a></li>
+                <li><a tabindex="3" href="#contact">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main id="content">
-        <section aria-labelledby="hero-title">
+        <section aria-labelledby="Главный заголовок страницы">
             <h1 class="hero-title">Заголовок лендинга</h1>
             <p>короткий подзаголовок с ценностью</p>
         </section>
-        <secction id="pricing" aria-labelledby="pricing-title">
-            <h2>Наши товары</h2>
-            <div class="card-grid">
-                <div class="card">
+        <h2 class="heading">Почему мы </h2>
+        <section id="features" aria-labelledby = "почему мы">
+
+            <ul class="features-grid">
+                <li tabindex="4" class="card" aria-labelledby = "прайс">
                     <img src="assets/img/Module 1/HTML5_logo_and_wordmark.svg.png" alt="HTML">
                     <div class="card-text">
-                        <h3>HTML</h3>
+                        <h3>Нам можно доверять</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
                         </p>
-                        <a href="#" class="btn secBtn">Узнать больше</a>
+                        <a tabindex="5" href="#" class="btn secBtn">Посмотреть прайс</a>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="assets/img/Module 1/css3.svg" alt="CSS">
+                </li>
+                <li tabindex="6" class="card" aria-labelledby = "как оплачивать">
+                    <img src="assets/img/Module 1/HTML5_logo_and_wordmark.svg.png" alt="HTML">
                     <div class="card-text">
-                        <h3>CSS</h3>
+                        <h3>Прозрачные переводы</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
                         </p>
-                        <a href="#" class="btn secBtn">Узнать больше</a>
+                        <a tabindex="7" href="#" class="btn secBtn">Как оплатить ?</a>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="assets/img/Module 1/javascript-logo-png_seeklogo-330541.png" alt="JS">
+                </li>
+                <li tabindex="8" class="card" aria-labelledby = "отзывы клиентов">
+                    <img src="assets/img/Module 1/HTML5_logo_and_wordmark.svg.png" alt="HTML">
                     <div class="card-text">
-                        <h3>JS</h3>
+                        <h3>Много положительных отзывов</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
                         </p>
-                        <a href="#" class="btn secBtn">Узнать больше</a>
+                        <a tabindex="9" href="#" class="btn secBtn">Читать отзывы</a>
                     </div>
+                </li>
+                <li tabindex="10" class="card" aria-labelledby = "Задать вопрос">
+                    <img src="assets/img/Module 1/HTML5_logo_and_wordmark.svg.png" alt="HTML">
+                    <div class="card-text">
+                        <h3>Поддержка 24/7</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
+                        </p>
+                        <a tabindex="11" href="#" class="btn secBtn">Задать вопрос</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <h2 class="heading">Наши товары</h2>
+
+        <section aria-labelledby = "наши товары" id="pricing" class="card-grid" aria-labelledby="pricing-title">
+
+            <article tabindex="12" class="card" aria-labelledby = "что такое HTML">
+                <img src="assets/img/Module 1/HTML5_logo_and_wordmark.svg.png" alt="HTML">
+                <div class="card-text">
+                    <h3>HTML</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
+                    </p>
+                    <a tabindex="13" href="#" class="btn secBtn">Узнать больше про HTML</a>
                 </div>
-            </div>
-        </secction>
+            </article>
+            <article tabindex="14" class="card" aria-labelledby = "что такое css">
+                <img src="assets/img/Module 1/css3.svg" alt="CSS">
+                <div class="card-text">
+                    <h3>CSS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
+                    </p>
+                    <a tabindex="15" href="#" class="btn secBtn">Узнать больше про CSS</a>
+                </div>
+            </article>
+            <article tabindex="16" class="card" aria-labelledby = "Что такое JS">
+                <img src="assets/img/Module 1/javascript-logo-png_seeklogo-330541.png" alt="JS">
+                <div class="card-text">
+                    <h3>JS</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure doloremque obcaecati suscipit ab, eum est, aliquam nobis, ea quidem ad eos numquam animi veniam soluta. Sunt optio earum totam!
+                    </p>
+                    <a tabindex="17" href="#" class="btn secBtn">Узнать больше про JS</a>
+                </div>
+            </article>
+        </section>
         <footer>
             <p id="contact">&copy; 2025 Brand</p>
         </footer>
