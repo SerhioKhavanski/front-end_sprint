@@ -1,0 +1,17 @@
+:root{
+    --border-color:rgb(199, 199, 199);
+    --shadow-color:rgb(209, 209, 209);
+    --a-color:rgb(80, 80, 80);
+    --bg-color:white;
+    --main-txt:rgb(70, 70, 70);
+    --btn-color:rgb(105, 128, 228);
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --border-color:rgb(122, 122, 122);
+        --shadow-color:rgba(245, 245, 245, 0.644);
+        --a-color:rgb(180, 180, 180);
+        --bg-color:rgb(39, 39, 39);
+        --main-txt:rgb(247, 247, 247);
+    }
+}
