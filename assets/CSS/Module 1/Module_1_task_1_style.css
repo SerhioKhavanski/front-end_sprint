@@ -53,7 +53,7 @@ aside{
     border-radius: 10px;
     color: white;
 }
-.secBtn{
+.secBtn,.skip{
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
     color: var(--a-color);
@@ -68,9 +68,6 @@ aside{
     left: 2rem;
     cursor: pointer;
     z-index: 6;
-}
-nav a{
-
 }
 
 /* --------------menu for all projects------------------------ */
@@ -144,6 +141,17 @@ nav a{
     width: 75%;
     bottom: 75%;
     left:10%;
+}
+.skip{
+    position:absolute;
+    left:-9999px;
+    transition: 0.3s;
+    padding: 0.4rem 1.2rem;
+    border-radius: 5px;
+}
+.skip:focus{
+    left:160px;
+    top:35px;
 }
 @media(max-width:768px){
     .card-mod{
