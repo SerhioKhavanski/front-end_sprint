@@ -203,4 +203,14 @@ nav a{
     background-color: rgb(74, 89, 158);
 
 }
-
+header{
+    background-color: var(--bg-color);
+    position: fixed;
+    left:  40%;
+    z-index: 7;
+}
+header:has( + main #pricing:target) nav a[href="#pricing"],
+header:has( + main #features:target) nav a[href="#features"],
+header:has( + main #contact:target) nav a[href="#contact"]{
+    border-bottom: 2px solid orange;
+}
