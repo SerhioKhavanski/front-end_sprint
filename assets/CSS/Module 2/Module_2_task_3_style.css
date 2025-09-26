@@ -1,0 +1,15 @@
+
+.wrap p {
+    color: rgb(104, 104, 216);
+}
+.wrap>p{
+    color: bisque;
+}
+.tip + p{
+    color: rgb(156, 95, 160);
+}
+.wrap~p{
+    max-width: 450px;
+    margin:1rem auto;
+}
+
