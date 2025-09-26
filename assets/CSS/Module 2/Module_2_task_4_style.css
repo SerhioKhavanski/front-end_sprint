@@ -1,0 +1,19 @@
+a[href^="http"]{
+    text-decoration: underline;
+}
+a[href$=".pdf"]{
+    color: orange;
+}
+input[type="email"]{
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    padding: 0.3em 1em 0.3em .5em;
+    border-radius: 5px;
+    margin-top: 1em;
+    color: var(--main-txt);
+}
+li[data-tags~="new"]{
+    color: var(--main-txt);
+}
+html[lang|="en"] body{font-family: system-ui;} 
