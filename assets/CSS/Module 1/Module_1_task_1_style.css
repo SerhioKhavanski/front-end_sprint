@@ -144,10 +144,7 @@ nav a{
     }
 }
 @media (hover:hover) and (pointer: fine){
-    .secBtn:hover{
-        box-shadow: 0 0 15px var(--shadow-color);
-        translate: 0 -4px;
-    }
+
     nav a:hover{
         box-shadow: 0 0 15px var(--shadow-color);
     }

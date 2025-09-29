@@ -28,6 +28,7 @@ aside{
     translate: 0% 10%;
 }
 .btn,.label-for-all-project{
+    border: none;
     display: inline-block;
     padding: 0.7rem;
     background-color: var(--btn-color);
@@ -58,12 +59,23 @@ aside{
     .label-for-all-project{
         transition:box-shadow 0.3s;
     }
-    .label-for-all-project:hover{
+    .label-for-all-project:hover,.btn:hover{
         border-color: transparent;
         box-shadow: 0 0 15px rgba(151, 183, 241, 0.568);
     }
+    .secBtn:hover{
+        box-shadow: 0 0 15px var(--shadow-color);
+        translate: 0 -4px;
+    }
 }
-.label-for-all-project:active{
+.secBtn:active{
+    box-shadow: inset 0 0 5px var(--inner-shadow-color);
+    background-color: var(--bg-color-active);
+    color: var(--btn-active-color);
+    translate: 0 0px;
+    
+}
+.label-for-all-project:active,.btn:active{
     box-shadow: inset 0 0 5px var(--shadow-color);
     color: rgb(212, 212, 212);
     translate: 0 5%;
