@@ -29,10 +29,35 @@ form:focus-within{
     padding: .5em;
     border-radius: 15px;
 }
-input:focus,input:focus-visible{
+input:focus-visible{
     box-shadow: 0 0 20px var( --shadow-color);
-    outline: 2px solid white;
+    outline: 2px solid rgb(255, 55, 185);
 }
-.btn:focus,.btn:focus-visible{
-    outline: 2px solid white;
+.btn:focus-visible{
+    outline: 2px solid rgb(255, 55, 185);
 }
+.menu-wrapper{
+    top:1rem;
+}
+.btn{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+#agree{
+    width: auto;
+    vertical-align: middle;
+}
+.info{
+    width: 80%;
+}
+.field:last-child{
+    display: flex;
+    gap: 1rem;
+}
+#agree:checked~.btn{
+    cursor:pointer;
+    pointer-events:all;
+    opacity: 1;
+} 
