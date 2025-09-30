@@ -16,10 +16,13 @@
 #advantagers+section li{
     color: var(--main-txt);
 }
+#advantagers+section ul{
+    padding-left: 1.25rem;
+}
 #advantagers+section li::marker{
     content: "♕";
     color: var(--main-txt);
-    font-size: 1rem;
+    font-size: 1.2em;
 }
 details{
     color: var(--main-txt);
@@ -39,10 +42,15 @@ summary:focus-visible{
 summary::after{
     content: "✈";
     display: inline-block;
+    transform: translate(10px, 0) rotate(0deg);
     translate: 10px 0;
     transition: .3s;
+    color: var(--main-txt);
+}
+summary::-webkit-details-marker{
+    display: none
 }
 details[open]>summary::after{
-    transform: rotate(90deg);
+    transform: translate(10px, 0) rotate(90deg);
 }
 

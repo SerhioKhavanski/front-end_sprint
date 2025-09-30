@@ -14,9 +14,7 @@
     border-left: none;
     border-radius: 0 25px 25px 0;
     padding: 0.9rem;
-    height: 100vh;
     background-color: var(--bg-color);
-    overflow-y: auto;
     translate: -100% 10%;
     transition: 0.5s;
     position: fixed;
