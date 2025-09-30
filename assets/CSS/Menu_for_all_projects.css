@@ -1,5 +1,14 @@
+:root{
+    --scroll-track: var(--bg-color, #fff);
+    --scroll-thumb: color-mix(in oklab, var(--main-txt, #111) 35%, transparent);
+    --scroll-thumb-hover: color-mix(in oklab, var(--main-txt, #111) 55%, transparent);
+}
 /* --------------menu for all projects------------------------ */
-aside{
+
+.menu-wrapper{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 180px;
     border: 1px solid var(--border-color);
     border-left: none;
@@ -12,8 +21,12 @@ aside{
     transition: 0.5s;
     position: fixed;
     z-index: 5;
+    top:10px;
 }
-
+.menu-scroll{
+    overflow: auto;
+    padding-block: 8px;
+}
 .side-menu{
     padding: 0;
     list-style: none;
@@ -21,6 +34,18 @@ aside{
     flex-direction: column;
     gap: 0.5rem;
 }
+.menu-scroll .side-menu{ 
+    padding-inline-end: 8px; 
+} 
+.menu-scroll{
+    scrollbar-width: thin;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+    
+}
+.menu-scroll::-webkit-scrollbar{ width:10px; }
+.menu-scroll::-webkit-scrollbar-track{ background:var(--scroll-track); border-radius:999px; margin-block:8px; }
+.menu-scroll::-webkit-scrollbar-thumb{ background:var(--scroll-thumb); border:2px solid var(--scroll-track); border-radius:999px; }
+.menu-scroll::-webkit-scrollbar-thumb:hover{ background:var(--scroll-thumb-hover); }
 #asideCheckbox{
     visibility: hidden;
 }
@@ -54,6 +79,7 @@ aside{
 .side-menu>li{
     margin-top: 1rem;
 }
+
 /* --------------menu for all projects------------------------ */
 @media(hover:hover) and (pointer:fine){
     .label-for-all-project{

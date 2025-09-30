@@ -8,6 +8,7 @@
     --bg-color-active:rgb(245, 245, 245);
     --btn-active-color:rgb(181, 181, 181);
     --inner-shadow-color:rgba(0, 0, 0, 0.487);
+    
 
 }
 @media (prefers-color-scheme: dark) {
