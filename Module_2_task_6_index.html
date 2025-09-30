@@ -16,27 +16,31 @@
         <article class="card">
             <form action="">
                 <h3>Заполните форму</h3>
+
                 <div class="field">
-                    <label for="text">Имя</label><br>
-                    <input id="text" type="text" placeholder="Введите Ваше Имя"><br>
+                    <input minlength="2" maxlength="10" id="text" type="text" placeholder="" required><br>
+                    <label  for="text">Введите Ваше Имя</label><br>
                 </div>
+
                 <div class="field">
-                    <label for="email">Email</label><br>
-                    <input id="email" type="email" placeholder="Введите Ваш email"><br>
+                    <input id="email" type="email" placeholder="" required><br>
+                    <label for="email">Введите Ваш email</label><br>
                 </div>
+
                 <div class="field">
-                    <label for="tel">Телефон</label><br>
-                    <input id="tel" type="tel" placeholder="Введите номер Вашего телефона"><br>
+                    <input min="12" max="99" id="num" type="number" placeholder="" required><br>
+                    <label for="num">Введите ваш возраст</label><br>
                 </div>
+
                 <input id="agree" type="checkbox">
                 <label class="info" for="agree">Я даю соглащение на обработку персональных данных</label>
-                <button class="btn" type="submit" >Отправить</button>
+                <button class="btn" type="submit" disabled>Отправить</button>
             </form>
         </article>
     </section>
 
     <section>
-        
+
         <input type="checkbox" name="" id="asideCheckbox">
         <label class="label-for-all-project" for="asideCheckbox">Все проекты</label>
         <aside class="menu-wrapper">
